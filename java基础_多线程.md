@@ -55,10 +55,34 @@
 
 # 线程间通信
 >多线程间通讯就是多个线程操作同一个资源，但是操作的动作不同
+<<<<<<< HEAD
 1. 为什么需要通信
     - 多线程执行并发的时候，如果需要指定线程等待或者唤醒指定线程，需要通信
 2. 通信方式
     - 在同步代码块中，使用锁对象的wait()方法可以让当前线程等待，直到有其他线程唤醒为止
     - 使用锁对象的nofity()方法可以唤醒一个等待的线程，或者notifyAll唤醒所有等待的线程
     - 多线程间通信用sleep很难实现，睡眠时间很难把握
+=======
+1. 为什么
+    - 多线程并发执行的时候，如果需要指定线程等待或者唤醒指定线程，需要通信
+2. 怎么做
+    - 在同步代码块中，使用锁对象的wait()方法可以让当前线程等待，直到有其他线程唤醒位置
+    - 使用锁对象的notify()方法可以唤醒一个等待的线程，或者使用nofityAll()唤醒所有等待的线程
+    - 不可以用sleep(),因为睡眠时间很难把握
+
+# Lock 和 Condition
+>实现比synchronized方法和语句可获得更广泛的锁的操作，可以支持多个相关的Condition对象
+
+1. Lock是个接口
+    - 锁是控制多个线程对共享数据进行访问的工具
+    - JDK1.5 之后，synchronized 替换成显示的Lock操作，将Object中的wait(), notify(), notifyAll()替换成Condition对象，该对象可以对Lock进行获取
+2. Lock方法摘要
+    - void lock(), 获取锁
+    - Condition newCondition() 返回绑定到此Lock实例的新Condition对象
+    - void unlock(), 释放锁
+3. Condition 方法摘要
+    - void await(), 等待状态
+    - void signal(), 唤醒一个线程
+    - void signalAll() 唤醒所有等待线程
+>>>>>>> b1450e38271360b27a9614640210aa16b3f8c6b2
 

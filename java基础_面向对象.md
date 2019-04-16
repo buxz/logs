@@ -107,8 +107,26 @@ Person p = new Person();
     - 抽象类中定义继承体系的共性功能，接口定义继承体系的扩展功能
 
 # == 和 equals()区别
-1. == 用于比较基本类型，比较的值；比较引用类型，比较的是对象的内存地址
-2. equals 只能用于比较引用数据类型
+1. 基本数据类型，变量直接存储的是‘值’
+2. 非基本数据类型（引用类型），变量存储的是对象在内存中的地址
+3. == 用于比较基本类型，比较的值；比较引用类型，比较的是对象的内存地址
+4. equals，是基本Object中的方法，看源码发现默认是比较的内存地址，其他类比如String类是重写的该方法，所以比较的不仅是内存地址，还比较的是值
+5. equals 方法不能作用于基本数据类型的变量 
+```
+String str = new String("hello");
+String str1 = new String("hello");
+String str2 = new String("hello");
+System.out.println(str1==str2); // false，比较的是地址
+System.out.println(str1.equals(str2)); // true, String类重写的equals方法，不仅比较内存地址，还比较内容
+
+str1 = str;
+str2 = str;
+System.out.println(str1==str2); // true,比较的是内存地址
+
+int n=3;
+int m=3;
+System.out.println(n==m);// true,基本数据类型，直接比较值
+```
 
 # equals() hashcode() 关系
 1. hashcode()是 Object类的方法，返回一个哈希值

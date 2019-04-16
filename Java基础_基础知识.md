@@ -1,8 +1,8 @@
 # 数据类型
 1. 基本数据类型（4类8种）
-	- 整数类型： byte, short, int, long
-	- 浮点型：float, double
-	- 字符类型： char
+	- 整数类型： byte(1 byte), short(2 byte), int(4 byte), long(8 byte)
+	- 浮点型：float(4 byte), double(8 byte)
+	- 字符类型： char(2 byte)
 	- 布尔类型： boolean
 2. 引用数据类型
 	- 类

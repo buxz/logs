@@ -1,0 +1,33 @@
+Java 区分大小写
+java 多线程
+restful
+hashmap
+如何实现线程间通信
+多线程锁竞争问题
+rabbitMQ
+
+微服务 服务间通信
+
+loadrunning 
+
+如何检测代码里的瓶颈 锁或者io等待
+
+例如在 linux 中用  tcpdump 可以监视数据包的情况等等
+
+也可以用  windebug  来跟踪测试
+
+持续集成之代码质量管理-Sonar
+
+缓存穿透
+
+https://flutterchina.club/ 开发原生的IOS/Android应用
+
+mysql/oracle 区分
+mysql 各种搜索引擎区别
+hashMap 线程不安全的原因
+redis 使用场景/ 为什么需要redis/持久化方案
+Jenkins 
+分布式如何保证主键ID的唯一性
+
+antive 关键字
+
